@@ -1,5 +1,5 @@
 1. clone kodenya:
-    https://github.com/jamilsalsabila/fastprinttest/tree/master
+    https://github.com/jamilsalsabila/fastprinttest.git
 
 2. masuk ke direktori
 
