@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <td>Nama Produk</td>
+        <td>{{data.nama_produk}}</td>
+    </tr>
+    <tr>
+        <td>Harga</td>
+        <td>{{data.harga}}</td>
+    </tr>
+    <tr>
+        <td>Kategori</td>
+        <td>{{data.kategori}}</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>{{data.status}}</td>
+    </tr>
+</table>
+
+<form action="/products/{{data.id_produk}}" method="post">
+    <p>Apakah data tersebut ingin dihapus?</p>
+    <input type="submit" value="ya" name="hapus">
+    <input type="submit" value="tidak" name="hapus">
+</form>

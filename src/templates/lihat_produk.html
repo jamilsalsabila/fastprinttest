@@ -1,0 +1,23 @@
+<a href="/">halaman utama</a>
+<table class="styled-table" style="font-size: 10px; font-family: sans-serif;">
+    <thead>
+        <tr>
+            <th>ID Produk</th>
+            <th>Nama Produk</th>
+            <th>Harga</th>
+            <th>Kategori</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td>{{this.id_produk}}</td>
+            <td>{{this.nama_produk}}</td>
+            <td>{{this.harga}}</td>
+            <td>{{this.kategori}}</td>
+            <td>{{this.status}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
