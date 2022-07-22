@@ -3,14 +3,12 @@
 
 2. masuk ke direktori
 
-3. npm init 
+3. npm install 
 
-4. npm install 
+4. projek ini menggunakan postgresql, framework hapi.js, node.js. Install dulu jika belum ada, terutama postgresql
 
-5. projek ini menggunakan postgresql, framework hapi.js, node.js. Install dulu jika belum ada, terutama postgresql
-
-5.a. jalankan:
-        npm run migrate up
+5  jalankan:
+    npm run migrate up
 
 6. masuk ke folder data
 

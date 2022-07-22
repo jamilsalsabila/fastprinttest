@@ -24,7 +24,7 @@ class ProductsHandler {
                 },
             });
             response.code(201);
-            return response;
+            return h.view('berhasil', { status: 'success', message: `data berhasil dimasukkan dengan id_produk = ${id}` });
         } catch (error) {
             if (error instanceof ClientError) {
                 const response = h.response({
@@ -32,14 +32,14 @@ class ProductsHandler {
                     message: error.message,
                 });
                 response.code(error.status);
-                return response;
+                return h.view('gagal', { status: 'gagal', message: error.message });
             }
             const response = h.response({
                 status: 'error',
                 message: error.message,
             });
             response.code(500)
-            return response;
+            return h.view('gagal', { status: 'gagal', message: error.message });
         }
     }
 
@@ -79,14 +79,14 @@ class ProductsHandler {
                     message: error.message,
                 });
                 response.code(error.status);
-                return response;
+                return h.view('gagal', { status: 'gagal', message: error.message });
             }
             const response = h.response({
                 status: 'error',
                 message: error.message,
             });
             response.code(500)
-            return response;
+            return h.view('gagal', { status: 'gagal', message: error.message });
         }
     }
 
@@ -102,7 +102,7 @@ class ProductsHandler {
                 message: 'Data produk berhasil di-update',
             });
             response.code(200);
-            return h.redirect('/products');
+            return h.view('berhasil', { status: 'success', message: `data berhasil di-update dengan id_produk = ${id}` });
         } catch (error) {
             if (error instanceof ClientError) {
                 const response = h.response({
@@ -110,14 +110,14 @@ class ProductsHandler {
                     message: error.message,
                 });
                 response.code(error.status);
-                return response;
+                return h.view('gagal', { status: 'gagal', message: error.message });
             }
             const response = h.response({
                 status: 'error',
                 message: error.message,
             });
             response.code(500)
-            return response;
+            return h.view('gagal', { status: 'gagal', message: error.message });
         }
     }
 
@@ -131,7 +131,7 @@ class ProductsHandler {
                 message: 'Produk berhasil dihapus',
             });
             response.code(200)
-            return h.redirect('/products');
+            return h.view('berhasil', { status: 'success', message: `data berhasil dihapus dengan id_produk = ${id}` });
 
         } catch (error) {
             if (error instanceof ClientError) {
@@ -140,14 +140,14 @@ class ProductsHandler {
                     message: error.message,
                 });
                 response.code(error.status);
-                return response;
+                return h.view('gagal', { status: 'gagal', message: error.message });
             }
             const response = h.response({
                 status: 'error',
                 message: error.message,
             });
             response.code(500)
-            return response;
+            return h.view('gagal', { status: 'gagal', message: error.message });
         }
     }
 
