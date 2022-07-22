@@ -9,6 +9,9 @@
 
 5. projek ini menggunakan postgresql, framework hapi.js, node.js. Install dulu jika belum ada, terutama postgresql
 
+5.a. jalankan:
+        npm run migrate up
+
 6. masuk ke folder data
 
 7. jalankan:
