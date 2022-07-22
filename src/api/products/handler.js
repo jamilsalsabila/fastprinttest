@@ -157,7 +157,7 @@ class ProductsHandler {
         } else if (request.payload.hapus === 'tidak') {
             return h.redirect("/");
         }
-        // return this.putProductByIdHandler(request, h);
+        return this.putProductByIdHandler(request, h);
     }
 
 }
